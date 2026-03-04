@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu id="root-menu">
+    <separator label="Kali Openbox" />
+
+    <!-- Search (Spotlight) -->
+    <item label="🔍 Search..." icon="/usr/share/icons/hicolor/24x24/apps/utilities-terminal.png">
+        <action name="Execute"><execute>rofi -show drun -show-icons</execute></action>
+    </item>
+
+    <separator />
+
+    <!-- System -->
+    <menu id="system" label="⚡ System">
+        <item label="Terminal (Kitty)" icon="/usr/share/icons/hicolor/24x24/apps/terminator.png">
+            <action name="Execute"><execute>kitty</execute></action>
+        </item>
+        <item label="Text Editor (Nano)" icon="/usr/share/icons/hicolor/24x24/apps/accessories-text-editor.png">
+            <action name="Execute"><execute>kitty -e nano</execute></action>
+        </item>
+        <item label="File Manager" icon="/usr/share/icons/hicolor/24x24/apps/thunar.png">
+            <action name="Execute"><execute>thunar</execute></action>
+        </item>
+        <separator />
+        <item label="Run..." icon="/usr/share/icons/hicolor/24x24/apps/utilities-terminal.png">
+            <action name="Execute"><execute>rofi -show run</execute></action>
+        </item>
+        <separator />
+        <item label="Lock Screen" icon="/usr/share/icons/hicolor/24x24/apps/preferences-system-lock.png">
+            <action name="Execute"><execute>xlock -mode random</execute></action>
+        </item>
+        <item label="Logout">
+            <action name="Execute"><execute>openbox --exit</execute></action>
+        </item>
+        <item label="Reboot">
+            <action name="Execute"><execute>systemctl reboot</execute></action>
+        </item>
+        <item label="Shutdown">
+            <action name="Execute"><execute>systemctl poweroff</execute></action>
+        </item>
+    </menu>
+
+    <!-- Network -->
+    <menu id="network" label="📡 Network">
+        <item label="Network Manager">
+            <action name="Execute"><execute>nm-connection-editor</execute></action>
+        </item>
+        <item label="WiFi Settings">
+            <action name="Execute"><execute>nm-connection-editor</execute></action>
+        </item>
+        <item label="Wireshark">
+            <action name="Execute"><execute>wireshark</execute></action>
+        </item>
+        <item label="WiFi Scanner (Wifite)">
+            <action name="Execute"><execute>wifite</execute></action>
+        </item>
+    </menu>
+
+    <!-- Tools -->
+    <menu id="tools" label="🛠️ Tools">
+        <item label="Metasploit">
+            <action name="Execute"><execute>kitty -e msfconsole</execute></action>
+        </item>
+        <item label="Nmap">
+            <action name="Execute"><execute>kitty -e nmap</execute></action>
+        </item>
+        <item label="SQLMap">
+            <action name="Execute"><execute>kitty -e sqlmap</execute></action>
+        </item>
+        <item label="Hydra">
+            <action name="Execute"><execute>kitty -e hydra</execute></action>
+        </item>
+        <item label="John">
+            <action name="Execute"><execute>kitty -e john</execute></action>
+        </item>
+        <item label="Hashcat">
+            <action name="Execute"><execute>kitty -e hashcat</execute></action>
+        </item>
+        <item label="Responder">
+            <action name="Execute"><execute>kitty -e responder</execute></action>
+        </item>
+    </menu>
+
+    <!-- Settings -->
+    <menu id="settings" label="⚙️ Settings">
+        <item label="Openbox Config">
+            <action name="Execute"><execute>obconf</execute></action>
+        </item>
+        <item label="Rofi Theme">
+            <action name="Execute"><execute>rofi-theme-selector</execute></action>
+        </item>
+        <item label="Wallpaper">
+            <action name="Execute"><execute>nitrogen</execute></action>
+        </item>
+        <item label="Nvidia Settings">
+            <action name="Execute"><execute>nvidia-settings</execute></action>
+        </item>
+    </menu>
+
+    <separator />
+
+    <!-- Accessories -->
+    <menu id="accessories" label="📦 Accessories">
+        <item label="Calculator">
+            <action name="Execute"><execute>gnome-calculator</execute></action>
+        </item>
+        <item label="File Manager">
+            <action name="Execute"><execute>thunar</execute></action>
+        </item>
+    </menu>
+
+    <item label="About">
+        <action name="Execute"><execute>kali-about</execute></action>
+    </item>
+</openbox_menu>

@@ -1,0 +1,11 @@
+# Kali packages to REMOVE (heavy/default items)
+@kali-linux-core
+@kali-desktop-xfce
+@kali-desktop-lxqt
+gnome
+gnome-shell
+gnome-software
+xfce4
+lxqt
+lightdm
+gdm3

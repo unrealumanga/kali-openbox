@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_config xmlns="http://openbox.org/3.5/rc">
+    <theme>
+        <name>Pop-Kali-Dark</name>
+        <titleLayout>NLIMC</titleLayout>
+    </theme>
+
+    <desktops>
+        <number>4</number>
+        <firstdesk>1</firstdesk>
+        <names>
+            <name>Main</name>
+            <name>Work</name>
+            <name>Lab</name>
+            <name>Lab2</name>
+        </names>
+        <popupTime>875</popupTime>
+    </desktops>
+
+    <resize>
+        <drawContents>true</drawContents>
+        <popupShow>Nonpixel</popupShow>
+        <popupPosition>Center</popupPosition>
+        <popupWidth>200</popupWidth>
+    </resize>
+
+    <margins>
+        <top>0</top>
+        <bottom>0</bottom>
+        <left>0</left>
+        <right>0</right>
+    </margins>
+
+    <dock>
+        <hideAfter>0</hideAfter>
+    </dock>
+
+    <keyboard>
+        <chainQuitKey>C</chainQuitKey>
+        
+        <!-- Super key = Windows/Command key = Spotlight -->
+        <keybind key="Super_L">
+            <action name="Execute">
+                <execute>rofi -show drun -show-icons</execute>
+            </action>
+        </keybind>
+        
+        <!-- Alt+F2 = Spotlight too -->
+        <keybind key="A-F2">
+            <action name="Execute">
+                <execute>rofi -show run -show-icons</execute>
+            </action>
+        </keybind>
+        
+        <!-- Terminal -->
+        <keybind key="C-Return">
+            <action name="Execute">
+                <execute>kitty</execute>
+            </action>
+        </keybind>
+        
+        <!-- Screenshot -->
+        <keybind key="Print">
+            <action name="Execute">
+                <execute>xfce4-screenshooter</execute>
+            </action>
+        </keybind>
+        
+        <!-- Lock screen -->
+        <keybind key="C-A-L">
+            <action name="Execute">
+                <execute>xlock -mode random</execute>
+            </action>
+        </keybind>
+        
+        <!-- Volume control -->
+        <keybind key="C-A-Up">
+            <action name="Execute">
+                <execute>pactl set-sink-volume @DEFAULT_SINK@ +5%</execute>
+            </action>
+        </keybind>
+        <keybind key="C-A-Down">
+            <action name="Execute">
+                <execute>pactl set-sink-volume @DEFAULT_SINK@ -5%</execute>
+            </action>
+        </keybind>
+        <keybind key="C-A-M">
+            <action name="Execute">
+                <execute>pactl set-sink-mute @DEFAULT_SINK@ toggle</execute>
+            </action>
+        </keybind>
+
+        <!-- Desktop switching -->
+        <keybind key="C-A-Left">
+            <action name="GoToDesktop">
+                <to>left</to>
+                <wrap>true</wrap>
+            </action>
+        </keybind>
+        <keybind key="C-A-Right">
+            <action name="GoToDesktop">
+                <to>right</to>
+                <wrap>true</wrap>
+            </action>
+        </keybind>
+        
+        <keybind key="C-A-1">
+            <action name="GoToDesktop">
+                <to>1</to>
+            </action>
+        </keybind>
+        <keybind key="C-A-2">
+            <action name="GoToDesktop">
+                <to>2</to>
+            </action>
+        </keybind>
+        <keybind key="C-A-3">
+            <action name="GoToDesktop">
+                <to>3</to>
+            </action>
+        </keybind>
+        <keybind key="C-A-4">
+            <action name="GoToDesktop">
+                <to>4</to>
+            </action>
+        </keybind>
+
+        <!-- Window management -->
+        <keybind key="C-A-F">
+            <action name="ToggleFullscreen"/>
+        </keybind>
+        <keybind key="C-A-Q">
+            <action name="Close"/>
+        </keybind>
+        
+        <!-- Move window -->
+        <keybind key="A-F4">
+            <action name="Close"/>
+        </keybind>
+    </keyboard>
+
+    <mouse>
+        <dragThreshold>8</dragThreshold>
+        <raiseOnClick>false</raiseOnClick>
+        <focusLast>true</focusLast>
+        <screenEdgeWarpTime>400</screenEdgeWarpTime>
+        
+        <context name="Frame">
+            <mousebind button="Left" action="Drag">
+                <action name="MoveWindow"/>
+            </mousebind>
+            <mousebind button="Left" action="Press">
+                <action name="RaiseWindow"/>
+                <action name="FocusWindow"/>
+            </mousebind>
+            <mousebind button="Right" action="Press">
+                <action name="ShowMenu">
+                    <menu>client-menu</menu>
+                </action>
+            </mousebind>
+        </context>
+        
+        <context name="Client">
+            <mousebind button="Left" action="Drag">
+                <action name="MoveWindow"/>
+            </mousebind>
+            <mousebind button="Left" action="Press">
+                <action name="RaiseWindow"/>
+                <action name="FocusWindow"/>
+            </mousebind>
+        </context>
+    </mouse>
+
+    <menu>
+        <file>/etc/xdg/openbox/menu.xml</file>
+        <showDelay>200</showDelay>
+        <hideDelay>300</hideDelay>
+        <middle>no</middle>
+        <fuzzyMatch>true</fuzzyMatch>
+        <manageDesktops>true</manageDesktops>
+    </menu>
+
+    <applications>
+        <application name="kitty">
+            <decorations>no</decorations>
+            <position>
+                <x>center</x>
+                <y>center</y>
+            </position>
+            <size>
+                <width>1200</width>
+                <height>700</height>
+            </size>
+        </application>
+        
+        <application class="Nautilus">
+            <decorations>normal</decorations>
+            <maximized>true</maximized>
+        </application>
+        
+        <application class="Thunar">
+            <decorations>normal</decorations>
+        </application>
+    </applications>
+</openbox_config>

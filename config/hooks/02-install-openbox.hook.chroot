@@ -1,0 +1,75 @@
+#!/bin/bash
+# Hook: Install Openbox and configure
+
+set -e
+
+# Install Openbox and desktop
+apt-get -y install \
+    openbox \
+    obconf \
+    obmenu \
+    obmenu-generator \
+    rofi \
+    kitty \
+    thunar \
+    thunar-archive-plugin \
+    thunar-volman \
+    nitrogen \
+    picom \
+    gtk-theme-config \
+    xfce4-notifyd \
+    xfce4-screenshooter \
+    policykit-1-gnome \
+    network-manager-gnome \
+    pulseaudio \
+    pavucontrol \
+    volumeicon-apt
+
+# Install Bluetooth & WiFi
+apt-get -y install \
+    bluez \
+    bluez-tools \
+    blueman \
+    network-manager \
+    network-manager-openvpn \
+    network-manager-pptp \
+    network-manager-vpnc \
+    wireless-tools \
+    wpagui \
+    iwd
+
+# Install Nvidia drivers
+apt-get -y install \
+    nvidia-driver \
+    nvidia-settings \
+    nvidia-smi
+
+# Install utilities
+apt-get -y install \
+    git \
+    curl \
+    wget \
+    zsh \
+    htop \
+    neofetch \
+    vim \
+    nano \
+    tree \
+    tmux \
+    xclip \
+    xsel \
+    xdotool \
+    xlock
+
+# Setup Openbox config for root user
+mkdir -p /etc/xdg/openbox
+cp -r /root/config/openbox/rc.xml /etc/xdg/openbox/
+cp -r /root/config/openbox/menu.xml /etc/xdg/openbox/
+cp -r /root/config/openbox/autostart /etc/xdg/openbox/
+
+# Set default session
+mkdir -p /etc/lightdm/lightdm.conf.d
+echo "[Seat:*]
+session-wrapper=/etc/Xsession
+greeter-session=example-gtk-gnome
+user-session=openbox" > /etc/lightdm/lightdm.conf.d/99-openbox.conf

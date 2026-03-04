@@ -1,0 +1,19 @@
+#!/bin/bash
+# Hook: Remove default Kali desktop environments
+
+set -e
+
+# Remove Kali's default desktop
+apt-get -y purge \
+    kali-desktop-xfce \
+    kali-desktop-xfce \
+    xfce4 \
+    xfce4-goodies \
+    kali-desktop-lxqt \
+    lxqt \
+    lightdm \
+    || true
+
+# Clean up
+apt-get -y autoremove
+apt-get -y clean

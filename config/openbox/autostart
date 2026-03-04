@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# Openbox autostart - PopOS! style, lean and clean
+#
+
+# Wallpaper
+nitrogen --restore &
+
+# Compositor
+picom --config ~/.config/picom.conf &
+
+# Keyboard
+setxkbmap us &
+numlockx on &
+
+# Bluetooth
+blueman-applet &
+
+# Clipboard manager
+xclipmenud &
+
+# Authentication agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Cursor
+xsetroot -cursor_name left_ptr &
+
+# Disable power management
+xset -dpms &
+xset s off &
+
+# Notifications (minimal)
+xfce4-notifyd &
+
+echo "Openbox started - Press Super for Spotlight"
