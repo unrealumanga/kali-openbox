@@ -1,0 +1,7 @@
+{
+  "ollama_host": "localhost:11434",
+  "server_host": "localhost",
+  "server_port": "8080",
+  "preferred_models": ["llama2", "mistral", "codellama"],
+  "model_timeout_seconds": 300
+}

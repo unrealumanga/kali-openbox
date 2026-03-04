@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <openbox_menu id="root-menu">
-    <separator label="Kali Openbox" />
+    <separator label="OffTopic Linux" />
 
     <!-- Search (Spotlight) -->
     <item label="🔍 Search..." icon="/usr/share/icons/hicolor/24x24/apps/utilities-terminal.png">

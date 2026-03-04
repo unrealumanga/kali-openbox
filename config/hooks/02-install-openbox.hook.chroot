@@ -61,6 +61,11 @@ apt-get -y install \
     xdotool \
     xlock
 
+# Install Calamares installer
+apt-get -y install \
+    calamares \
+    calamares-settings-kali
+
 # Setup Openbox config for root user
 mkdir -p /etc/xdg/openbox
 cp -r /root/config/openbox/rc.xml /etc/xdg/openbox/

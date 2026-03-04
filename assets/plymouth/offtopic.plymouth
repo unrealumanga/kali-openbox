@@ -1,0 +1,25 @@
+# OffTopic Linux Plymouth Theme
+# Boot splash configuration
+
+# Theme name
+[offtopic]
+# Background
+background-color = "#0d0d0d"
+# Progress bar
+progress-color = "#00ff00"
+# Message text
+message-font = "Sans"
+message-color = "#ffffff"
+# Boot text  
+boot-font = "Sans"
+boot-color = "#00ff00"
+
+# Alternative gradient theme
+[offtopic-gradient]
+background-color = "#0d0d0d"
+progress-color = 0.1
+progress-color = 0.3
+progress-color = 0.5
+progress-color = 0.7
+progress-color = 0.9
+progress-color = 1.0

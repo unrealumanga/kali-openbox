@@ -1,0 +1,16 @@
+[Unit]
+Description=ai-core LLM Daemon
+After=network.target ollama.service
+Wants=ollama.service
+
+[Service]
+Type=simple
+User=%u
+WorkingDirectory=%h/.local/bin
+ExecStart=%h/.local/bin/ai-core %h/.config/ai-core/config.json
+Restart=on-failure
+RestartSec=10
+Environment="HOME=%h"
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,8 @@
+{
+  "enable_mac_randomization": false,
+  "randomize_on_network_up": false,
+  "enable_ttl_hardening": false,
+  "ttl_value": 64,
+  "enable_tmp_cleanup": false,
+  "debug": false
+}

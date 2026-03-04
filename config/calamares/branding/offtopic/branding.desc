@@ -1,0 +1,24 @@
+[Product]
+productName = OffTopic Linux
+productVersion = 1.0
+shortProductName = OffTopic
+shortDescription = Lightweight Security OS
+homepage = https://github.com/yourusername/kali-openbox
+bugreport = https://github.com/yourusername/kali-openbox/issues
+logo = 
+background = 
+windowLogo = 
+
+[Strings]
+bootLoader = GRUB
+defaultPartitionLayout = standard
+formatSwap = no
+keepBoth = 
+live = Live
+noBoot = 
+noEject = 
+reboot = 
+restart = 
+shutdown = 
+try = 
+welcome = Welcome to OffTopic Linux

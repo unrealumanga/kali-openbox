@@ -3,13 +3,21 @@
 # Openbox autostart - PopOS! style, lean and clean
 #
 
-# Wallpaper
-nitrogen --restore &
+# Wait for desktop to be ready
+sleep 1
 
-# Compositor
-picom --config ~/.config/picom.conf &
+# Set default wallpaper if nitrogen doesn't restore
+if [ ! -f "$HOME/.config/nitrogen/bg-saved.cfg" ]; then
+    nitrogen --set-zoom-fill /usr/share/backgrounds/offtopic/offtopic-dark.jpg &
+else
+    nitrogen --restore &
+fi
 
-# Keyboard
+# Compositor with vsync
+picom --config ~/.config/picom.conf --vsync &
+sleep 0.5
+
+# Keyboard layout
 setxkbmap us &
 numlockx on &
 
@@ -29,7 +37,13 @@ xsetroot -cursor_name left_ptr &
 xset -dpms &
 xset s off &
 
-# Notifications (minimal)
+# Notifications
 xfce4-notifyd &
 
-echo "Openbox started - Press Super for Spotlight"
+# Network applet
+nm-applet &
+
+# Volume icon
+volumeicon &
+
+echo "OffTopic Linux ready - Press Super for Spotlight"

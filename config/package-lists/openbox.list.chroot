@@ -67,3 +67,7 @@ responder
 impacket-scripts
 python3-pip
 python3-venv
+
+# Installer
+calamares
+calamares-settings-kali

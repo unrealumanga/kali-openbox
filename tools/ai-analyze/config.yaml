@@ -1,0 +1,14 @@
+ai_core:
+  endpoint: "http://localhost:8080/analyze"
+  model: "default"
+  temperature: 0.3
+  max_tokens: 4000
+  timeout: 120
+
+analysis:
+  chunk_size: 50000
+  max_file_size: 104857600  # 100MB
+
+output:
+  report_dir: "./reports"
+  json_format: false

@@ -1,0 +1,36 @@
+# Auto-Recon Configuration
+
+# Tool paths
+tools:
+  nmap: "/usr/bin/nmap"
+  dirb: "/usr/bin/dirb"
+  dnsenum: "/usr/bin/dnsenum"
+  ai_core: "/usr/local/bin/ai-core"
+
+# Nmap options
+nmap:
+  quick_scan: "-T4 -F -sV"
+  full_scan: "-T4 -p- -sV -sC -O"
+  output_format: "json"
+
+# Dirb options  
+dirb:
+  wordlist: "/usr/share/wordlists/dirb/common.txt"
+  output_format: "json"
+
+# DNS enumeration options
+dnsenum:
+  threads: 10
+  output_format: "xml"
+
+# AI options
+ai:
+  model: "local-llm"
+  temperature: 0.3
+  max_tokens: 2000
+
+# Output options
+output:
+  base_dir: "/tmp/recon"
+  keep_raw: true
+  summary_format: "color"

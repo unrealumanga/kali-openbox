@@ -1,0 +1,53 @@
+# OffTopic Linux GRUB Theme
+
+# GRUB menu theme configuration
+# Place in /boot/grub/themes/offtopic/theme.txt
+
+# Theme elements
+title-text: "OffTopic Linux"
+title-font: "Sans Bold 24"
+title-color: "#00ff00"
+
+# Message font
+message-font: "Sans 16"
+message-color: "#ffffff"
+
+# Item font
+item_font: "Sans 16"
+item_color: "#ffffff"
+selected_item_color: "#00ff00"
+
+# Boot menu
++ boot_menu {
+    left = 50%
+    top = 50%
+    width = 400
+    height = 200
+    
+    item_spacing = 20
+    
+    # Menu background
+    - image {
+        file = "menu.png"
+        stretch = true
+    }
+}
+
+# Desktop box (for progress bar)
++ progress_bar {
+    left = 20%
+    top = 80%
+    width = 60%
+    height = 20
+    
+    # Bar background
+    - common {
+        background_color = "#1a1a1a"
+        border_color = "#333333"
+    }
+    
+    # Progress fill
+    - progress_box {
+        background_color = "#00ff00"
+    }
+}

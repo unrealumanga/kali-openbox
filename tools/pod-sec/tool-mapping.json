@@ -1,0 +1,396 @@
+{
+  "nmap": {
+    "image": "instrumenta/nmap:latest",
+    "command": "nmap",
+    "network": "host"
+  },
+  "sqlmap": {
+    "image": "paoloo/sqlmap:latest",
+    "command": "sqlmap"
+  },
+  "nikto": {
+    "image": "sullo/nikto:latest",
+    "command": "nikto"
+  },
+  "hydra": {
+    "image": "vanic/hydra:latest",
+    "command": "hydra"
+  },
+  "dirb": {
+    "image": "madhavkk/dirb:latest",
+    "command": "dirb"
+  },
+  "gobuster": {
+    "image": "sansible/gobuster:latest",
+    "command": "gobuster"
+  },
+  "wpscan": {
+    "image": "wpscanteam/wpscan:latest",
+    "command": "wpscan"
+  },
+  "joomscan": {
+    "image": "madhavkk/joomscan:latest",
+    "command": "joomscan"
+  },
+  "droopescan": {
+    "image": "madhavkk/droopescan:latest",
+    "command": "droopescan"
+  },
+  "wappalyzer": {
+    "image": "madhavkk/wappalyzer-cli:latest",
+    "command": "wappalyzer"
+  },
+  "whatweb": {
+    "image": "madhavkk/whatweb:latest",
+    "command": "whatweb"
+  },
+  "amass": {
+    "image": "caffix/amass:latest",
+    "command": "amass"
+  },
+  "subfinder": {
+    "image": "projectdiscovery/subfinder:latest",
+    "command": "subfinder"
+  },
+  "assetfinder": {
+    "image": "madhavkk/assetfinder:latest",
+    "command": "assetfinder"
+  },
+  "findomain": {
+    "image": "madhavkk/findomain:latest",
+    "command": "findomain"
+  },
+  "httprobe": {
+    "image": "madhavkk/httprobe:latest",
+    "command": "httprobe"
+  },
+  "nuclei": {
+    "image": "projectdiscovery/nuclei:latest",
+    "command": "nuclei"
+  },
+  "ffuf": {
+    "image": "madhavkk/ffuf:latest",
+    "command": "ffuf"
+  },
+  "feroxbuster": {
+    "image": "madhavkk/feroxbuster:latest",
+    "command": "feroxbuster"
+  },
+  "ssh-audit": {
+    "image": "madhavkk/ssh-audit:latest",
+    "command": "ssh-audit"
+  },
+  "testssl": {
+    "image": "madhavkk/testssl:latest",
+    "command": "testssl.sh"
+  },
+  "whatportis": {
+    "image": "madhavkk/whatportis:latest",
+    "command": "whatportis"
+  },
+  "commix": {
+    "image": "madhavkk/commix:latest",
+    "command": "commix"
+  },
+  "xsstrike": {
+    "image": "madhavkk/xsstrike:latest",
+    "command": "xsstrike"
+  },
+  "dalfox": {
+    "image": "madhavkk/dalfox:latest",
+    "command": "dalfox"
+  },
+  "ssrfmap": {
+    "image": "madhavkk/ssrfmap:latest",
+    "command": "ssrfmap"
+  },
+  "paraminer": {
+    "image": "madhavkk/paraminer:latest",
+    "command": "paraminer"
+  },
+  "jwt_tool": {
+    "image": "madhavkk/jwt-tool:latest",
+    "command": "jwt_tool"
+  },
+  "jwtcrack": {
+    "image": "madhavkk/jwtcrack:latest",
+    "command": "jwtcrack"
+  },
+  "responder": {
+    "image": "madhavkk/responder:latest",
+    "command": "responder"
+  },
+  "impacket": {
+    "image": "madhavkk/impacket:latest",
+    "command": "impacket"
+  },
+  "mimikatz": {
+    "image": "madhavkk/mimikatz:latest",
+    "command": "mimikatz",
+    "privileged": true
+  },
+  "enum4linux": {
+    "image": "madhavkk/enum4linux:latest",
+    "command": "enum4linux"
+  },
+  "smbclient": {
+    "image": "madhavkk/smbclient:latest",
+    "command": "smbclient"
+  },
+  "ldapsearch": {
+    "image": "madhavkk/ldapsearch:latest",
+    "command": "ldapsearch"
+  },
+  "odat": {
+    "image": "madhavkk/odat:latest",
+    "command": "odat"
+  },
+  "oscanner": {
+    "image": "madhavkk/oscanner:latest",
+    "command": "oscanner"
+  },
+  "redis-tools": {
+    "image": "madhavkk/redis-tools:latest",
+    "command": "redis-cli"
+  },
+  "mongosh": {
+    "image": "mongo:latest",
+    "command": "mongosh"
+  },
+  "mysql": {
+    "image": "mysql:latest",
+    "command": "mysql"
+  },
+  "psql": {
+    "image": "postgres:latest",
+    "command": "psql"
+  },
+  "mssql-cli": {
+    "image": "mcr.microsoft.com/mssql-tools:latest",
+    "command": "/opt/mssql-tools/bin/sqlcmd"
+  },
+  "pload": {
+    "image": "madhavkk/pload:latest",
+    "command": "pload"
+  },
+  "payloads": {
+    "image": "madhavkk/payloads:latest",
+    "command": "payloads"
+  },
+  "cyberchef": {
+    "image": "mpeppler/cyberchef:latest",
+    "command": "cyberchef"
+  },
+  "hashcat": {
+    "image": "madhavkk/hashcat:latest",
+    "command": "hashcat"
+  },
+  "john": {
+    "image": "madhavkk/john:latest",
+    "command": "john"
+  },
+  "crackmapexec": {
+    "image": "madhavkk/crackmapexec:latest",
+    "command": "crackmapexec"
+  },
+  "lsassy": {
+    "image": "madhavkk/lsassy:latest",
+    "command": "lsassy"
+  },
+  "privexchange": {
+    "image": "madhavkk/privexchange:latest",
+    "command": "privexchange"
+  },
+  "ntlmrelayx": {
+    "image": "madhavkk/ntlmrelayx:latest",
+    "command": "ntlmrelayx"
+  },
+  "secretsdump": {
+    "image": "madhavkk/secretsdump:latest",
+    "command": "secretsdump"
+  },
+  "psexec": {
+    "image": "madhavkk/impacket:latest",
+    "command": "psexec"
+  },
+  "wmiexec": {
+    "image": "madhavkk/impacket:latest",
+    "command": "wmiexec"
+  },
+  "smbexec": {
+    "image": "madhavkk/impacket:latest",
+    "command": "smbexec"
+  },
+  "evil-winrm": {
+    "image": "madhavkk/evil-winrm:latest",
+    "command": "evil-winrm"
+  },
+  "bloodhound": {
+    "image": "madhavkk/bloodhound:latest",
+    "command": "bloodhound"
+  },
+  "certipy": {
+    "image": "madhavkk/certipy:latest",
+    "command": "certipy"
+  },
+  "gettgtpkinit": {
+    "image": "madhavkk/gettgtpkinit:latest",
+    "command": "gettgtpkinit"
+  },
+  "rbcd-attack": {
+    "image": "madhavkk/rbcd-attack:latest",
+    "command": "rbcd-attack"
+  },
+  "krbrelayx": {
+    "image": "madhavkk/krbrelayx:latest",
+    "command": "krbrelayx"
+  },
+  "mitm6": {
+    "image": "madhavkk/mitm6:latest",
+    "command": "mitm6"
+  },
+  "ntdsutil": {
+    "image": "madhavkk/ntdsutil:latest",
+    "command": "ntdsutil"
+  },
+  "adcs-attack": {
+    "image": "madhavkk/adcs-attack:latest",
+    "command": "adcs-attack"
+  },
+  "coercer": {
+    "image": "madhavkk/coercer:latest",
+    "command": "coercer"
+  },
+  "petitpotam": {
+    "image": "madhavkk/petitpotam:latest",
+    "command": "petitpotam"
+  },
+  "dfscoerce": {
+    "image": "madhavkk/dfscoerce:latest",
+    "command": "dfscoerce"
+  },
+  "roast": {
+    "image": "madhavkk/asrep-roaster:latest",
+    "command": "roast"
+  },
+  "kerberoast": {
+    "image": "madhavkk/kerberoast:latest",
+    "command": "kerberoast"
+  },
+  "targetedKerberoast": {
+    "image": "madhavkk/targeted-kerberoast:latest",
+    "command": "targetedKerberoast"
+  },
+  "gpp-decrypt": {
+    "image": "madhavkk/gpp-decrypt:latest",
+    "command": "gpp-decrypt"
+  },
+  "m": {
+    "image": "mirthtool/mirth:latest",
+    "command": "mirth"
+  },
+  "rubeus": {
+    "image": "madhavkk/rubeus:latest",
+    "command": "Rubeus"
+  },
+  "procdump": {
+    "image": "madhavkk/procdump:latest",
+    "command": "procdump"
+  },
+  "lsass": {
+    "image": "madhavkk/lsass:latest",
+    "command": "lsass"
+  },
+  "safety": {
+    "image": "madhavkk/safety:latest",
+    "command": "safety"
+  },
+  "semgrep": {
+    "image": "returntocorp/semgrep:latest",
+    "command": "semgrep"
+  },
+  "checksec": {
+    "image": "madhavkk/checksec:latest",
+    "command": "checksec"
+  },
+  "linpeas": {
+    "image": "carlespsp/linpeas:latest",
+    "command": "linpeas.sh"
+  },
+  "winpeas": {
+    "image": "carlespsp/winpeas:latest",
+    "command": "winpeas.exe"
+  },
+  "linux-exploit-suggester": {
+    "image": "madhavkk/linux-exploit-suggester:latest",
+    "command": "linux-exploit-suggester.pl"
+  },
+  "pspy": {
+    "image": "pspspy/pspy:latest",
+    "command": "pspy64"
+  },
+  "trufflehog": {
+    "image": "madhavkk/trufflehog:latest",
+    "command": "trufflehog"
+  },
+  "gitjacker": {
+    "image": "madhavkk/gitjacker:latest",
+    "command": "gitjacker"
+  },
+  "dirstalk": {
+    "image": "madhavkk/dirstalk:latest",
+    "command": "dirstalk"
+  },
+  "jwtcat": {
+    "image": "madhavkk/jwtcat:latest",
+    "command": "jwtcat"
+  },
+  "jwtdecode": {
+    "image": "madhavkk/jwtdecode:latest",
+    "command": "jwtdecode"
+  },
+  "arsenal": {
+    "image": "madhavkk/arsenal:latest",
+    "command": "arsenal"
+  },
+  "arsenal-cli": {
+    "image": "madhavkk/arsenal-cli:latest",
+    "command": "arsenal-cli"
+  },
+  "chisel": {
+    "image": "jpillora/chisel:latest",
+    "command": "chisel"
+  },
+  "socat": {
+    "image": "alpine/socat:latest",
+    "command": "socat"
+  },
+  "nc": {
+    "image": "metmjjp/nc:latest",
+    "command": "nc"
+  },
+  "nc.traditional": {
+    "image": "metmjjp/nc-traditional:latest",
+    "command": "nc.traditional"
+  },
+  "proxychains4": {
+    "image": "madhavkk/proxychains4:latest",
+    "command": "proxychains4"
+  },
+  "proxychains": {
+    "image": "madhavkk/proxychains:latest",
+    "command": "proxychains"
+  },
+  "mitmproxy": {
+    "image": "mitmproxy/mitmproxy:latest",
+    "command": "mitmproxy"
+  },
+  "burp": {
+    "image": "madhavkk/burp-suite:latest",
+    "command": "burp"
+  },
+  "zap": {
+    "image": "owasp/zap2docker-stable:latest",
+    "command": "zap.sh"
+  }
+}
