@@ -53,15 +53,28 @@ setup_build() {
     cd $BUILD_DIR
     
     # Initialize live-build
+    if [ ! -f /usr/share/keyrings/kali-archive-keyring.gpg ]; then
+        log_info "Downloading Kali keyring..."
+        mkdir -p /usr/share/keyrings
+        wget -q https://archive.kali.org/archive-key.asc -O - | gpg --dearmor > /usr/share/keyrings/kali-archive-keyring.gpg
+        chmod 644 /usr/share/keyrings/kali-archive-keyring.gpg
+    fi
+
     lb config \
         --distribution $KALI_VERSION \
         --architectures amd64 \
         --binary-image iso-hybrid \
         --bootappend-live "boot=live components hostname=kali-openbox username=kali" \
-        --mirror-binary http://http.kali.org/kali \
         --mirror-bootstrap http://http.kali.org/kali \
-        --parent-mirror-binary http://http.kali.org/kali \
+        --mirror-chroot http://http.kali.org/kali \
+        --mirror-chroot-security http://http.kali.org/kali \
+        --mirror-binary http://http.kali.org/kali \
+        --mirror-binary-security http://http.kali.org/kali \
         --parent-mirror-bootstrap http://http.kali.org/kali \
+        --parent-mirror-chroot http://http.kali.org/kali \
+        --parent-mirror-chroot-security http://http.kali.org/kali \
+        --parent-mirror-binary http://http.kali.org/kali \
+        --parent-mirror-binary-security http://http.kali.org/kali \
         --linux-flavours amd64 \
         --source false \
         --debian-installer false

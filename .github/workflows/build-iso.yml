@@ -34,9 +34,23 @@ jobs:
 
       - name: Setup build directory
         run: |
+          sudo mkdir -p /usr/share/keyrings
+          wget -q https://archive.kali.org/archive-key.asc -O - | sudo gpg --dearmor -o /usr/share/keyrings/kali-archive-keyring.gpg
+          sudo chmod 644 /usr/share/keyrings/kali-archive-keyring.gpg
           mkdir -p build
           cd build
-          sudo lb config --distribution kali-rolling
+          sudo lb config \
+            --distribution kali-rolling \
+            --mirror-bootstrap http://http.kali.org/kali \
+            --mirror-chroot http://http.kali.org/kali \
+            --mirror-chroot-security http://http.kali.org/kali \
+            --mirror-binary http://http.kali.org/kali \
+            --mirror-binary-security http://http.kali.org/kali \
+            --parent-mirror-bootstrap http://http.kali.org/kali \
+            --parent-mirror-chroot http://http.kali.org/kali \
+            --parent-mirror-chroot-security http://http.kali.org/kali \
+            --parent-mirror-binary http://http.kali.org/kali \
+            --parent-mirror-binary-security http://http.kali.org/kali
 
       - name: Copy config files
         run: |
