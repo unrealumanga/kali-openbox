@@ -40,7 +40,9 @@ jobs:
           mkdir -p build
           cd build
           sudo lb config \
+            --mode debian \
             --distribution kali-rolling \
+            --archive-areas "main contrib non-free non-free-firmware" \
             --mirror-bootstrap http://http.kali.org/kali \
             --mirror-chroot http://http.kali.org/kali \
             --mirror-chroot-security http://http.kali.org/kali \
@@ -60,7 +62,7 @@ jobs:
       - name: Build ISO
         run: |
           cd build
-          sudo lb build 2>&1 | tee build.log
+          set -eo pipefail; sudo lb build 2>&1 | tee build.log
 
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
