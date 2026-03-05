@@ -53,8 +53,7 @@ jobs:
             --parent-mirror-chroot-security http://http.kali.org/kali \
             --parent-mirror-binary http://http.kali.org/kali \
             --parent-mirror-binary-security http://http.kali.org/kali \
-            --updates false \
-            --security false
+
 
       - name: Copy config files
         run: |
