@@ -1,57 +1,22 @@
-name: Build Kali Openbox ISO
+name: Build Kali ISO
 
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        description: 'Kali version (default: latest)'
-        required: false
-        default: ''
-        type: string
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
-    
+    container:
+      image: kalilinux/kali-rolling
+      options: --privileged
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install build dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            git \
-            live-build \
-            debootstrap \
-            squashfs-tools \
-            xorriso \
-            isolinux
-
-      - name: Clone Kali Build Scripts
-        run: |
-          git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
-
-      - name: Copy custom package list
-        run: |
-          cp -f config/package-lists/openbox.list.chroot live-build-config/kali-config/variant-default/package-lists/
+        run: apt update && apt install -y curl git live-build simple-cdd debootstrap
 
       - name: Build ISO
         run: |
-          cd live-build-config
-          sudo ./build.sh --verbose
-
-      - name: Upload ISO artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: kali-openbox-iso
-          path: live-build-config/images/*.iso
-          retention-days: 7
-
-      - name: Upload build log
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log
-          path: live-build-config/images/*.log
-          retention-days: 7
+          mkdir -p build
+          cd build && lb config ... && lb build
