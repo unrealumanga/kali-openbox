@@ -3,14 +3,14 @@ on: [workflow_dispatch, push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: kalilinux/kali-rolling
-      options: --privileged
     steps:
       - uses: actions/checkout@v4
-      - run: apt-get update && apt-get install -y curl git live-build simple-cdd debootstrap squashfs-tools xorriso
-      - run: ./build.sh
+      - run: sudo apt-get update && sudo apt-get install -y git live-build simple-cdd debootstrap squashfs-tools xorriso
+      - run: git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
+      - run: cp config/package-lists/openbox.list.chroot live-build-config/kali-config/variant-default/package-lists/
+      - run: cd live-build-config && sudo ./build.sh --variant default
+      - run: cd live-build-config && cp images/*.iso ../
       - uses: actions/upload-artifact@v4
         with:
           name: kali-openbox-iso
-          path: build/*.iso
+          path: "*.iso"
