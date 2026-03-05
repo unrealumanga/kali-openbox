@@ -64,8 +64,6 @@ setup_build() {
         --mode debian \
         --distribution $KALI_VERSION \
         --archive-areas "main contrib non-free non-free-firmware" \
-        --security false \
-        --updates false \
         --architectures amd64 \
         --binary-image iso-hybrid \
         --bootappend-live "boot=live components hostname=kali-openbox username=kali" \
