@@ -13,7 +13,7 @@ picom
 gtk-theme-config
 xfce4-notifyd
 xfce4-screenshooter
-policykit-1-gnome
+lxpolkit
 
 # Bluetooth & Wifi
 bluez
@@ -51,7 +51,7 @@ screen
 pulseaudio
 pulseaudio-utils
 pavucontrol
-volumeicon-apt
+volumeicon-alsa
 alsa-utils
 
 # Security tools (minimal - users can add more)
