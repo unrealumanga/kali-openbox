@@ -10,7 +10,7 @@ thunar-archive-plugin
 thunar-volman
 nitrogen
 picom
-gtk-theme-config
+#gtk-theme-config
 xfce4-notifyd
 xfce4-screenshooter
 lxpolkit
@@ -40,7 +40,7 @@ nano
 tree
 bpytop
 bat
-exa
+eza
 fzf
 ripgrep
 jq
