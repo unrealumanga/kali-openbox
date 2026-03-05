@@ -43,6 +43,8 @@ jobs:
             --mode debian \
             --distribution kali-rolling \
             --archive-areas "main contrib non-free non-free-firmware" \
+            --security false \
+            --updates false \
             --mirror-bootstrap http://http.kali.org/kali \
             --mirror-chroot http://http.kali.org/kali \
             --mirror-chroot-security http://http.kali.org/kali \
