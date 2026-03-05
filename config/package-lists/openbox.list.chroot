@@ -1,8 +1,6 @@
 # Openbox and Desktop
 openbox
 obconf
-obmenu
-obmenu-generator
 rofi
 kitty
 thunar
@@ -10,10 +8,7 @@ thunar-archive-plugin
 thunar-volman
 nitrogen
 picom
-#gtk-theme-config
 xfce4-notifyd
-xfce4-screenshooter
-lxpolkit
 
 # Bluetooth & Wifi
 bluez
@@ -25,8 +20,6 @@ network-manager-openvpn
 network-manager-pptp
 network-manager-vpnc
 wireless-tools
-wpagui
-iwd
 
 # Utilities
 git
@@ -38,14 +31,7 @@ neofetch
 vim
 nano
 tree
-bpytop
 bat
-eza
-fzf
-ripgrep
-jq
-tmux
-screen
 
 # Audio
 pulseaudio
@@ -70,4 +56,3 @@ python3-venv
 
 # Installer
 calamares
-calamares-settings-kali
