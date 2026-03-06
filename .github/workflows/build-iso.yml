@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: apt-get update && apt-get install -y git live-build simple-cdd debootstrap curl squashfs-tools xorriso sudo
       - run: git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
-      - run: cp config/package-lists/openbox.list.chroot live-build-config/kali-config/variant-default/package-lists/
-      - run: cd live-build-config && ./build.sh --variant default --verbose
+      - run: cp config/package-lists/openbox.list.chroot live-build-config/kali-config/variant-light/package-lists/
+      - run: cd live-build-config && ./build.sh --variant light --verbose
       - uses: actions/upload-artifact@v4
         with:
           name: kali-openbox-iso
